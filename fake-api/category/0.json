@@ -1,0 +1,64 @@
+[
+	{
+		"id": 0,
+		"title": "Mah special vue-loaded article",
+		"alias": "special-article",
+		"owner": "Toni Lähdekorpi",
+		"created": "2019-09-10T13:31:21.528Z",
+		"permission": [
+			10
+		]
+	},
+	{
+		"id": 1,
+		"title": "Höhöö",
+		"alias": "pena-article",
+		"owner": "Pena Penala",
+		"created": "2019-02-11T13:37:00.528Z",
+		"permission": [
+			0
+		]
+	},
+	{
+		"id": 2,
+		"title": "Just testing",
+		"alias": "just-testah",
+		"owner": "Toni Lähdekoodi",
+		"created": "2019-09-09T13:31:21.528Z",
+		"permission": [
+			0,
+			10
+		]
+	},
+	{
+		"id": 3,
+		"title": "Mah Höhöö",
+		"alias": "special-hahaa",
+		"owner": "Toni Lähdekorpi",
+		"created": "2019-09-10T13:31:21.528Z",
+		"permission": [
+			10,
+			0
+		]
+	},
+	{
+		"id": 4,
+		"title": "Mah Just testing Höhöö",
+		"alias": "hohoo-hahaa",
+		"owner": "Random Lorem",
+		"created": "2003-01-01T13:11:21.528Z",
+		"permission": [
+			123123123
+		]
+	},
+	{
+		"id": 90000,
+		"title": "Mah Multi page testing Höhöö",
+		"alias": "hohoo-asdasdasdasd",
+		"owner": "Random Lorem",
+		"created": "2003-01-01T13:11:21.528Z",
+		"permission": [
+			123123123
+		]
+	}
+]

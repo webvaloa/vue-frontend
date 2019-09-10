@@ -1,0 +1,42 @@
+[
+	{
+		"id": 6,
+		"title": "Höhöö Just Just Just Höhöö",
+		"alias": "psdfsdfsdfsdfsdfsdfsdfrticle",
+		"owner": "Pena Penala",
+		"created": "2019-02-11T13:37:00.528Z",
+		"permission": [
+			10
+		]
+	},
+	{
+		"id": 7,
+		"title": "Höhöö Just testing",
+		"alias": "jusasdasdasdqwdstah",
+		"owner": "Toni Lähdekoodi",
+		"created": "2019-09-09T13:31:21.528Z",
+		"permission": [
+			0
+		]
+	},
+	{
+		"id": 8,
+		"title": "Mah Höhöö Höhöö Höhöö Höhöö Höhöö",
+		"alias": "speciasdasd",
+		"owner": "Toni Lähdekorpi",
+		"created": "2019-09-10T13:31:21.528Z",
+		"permission": [
+			0
+		]
+	},
+	{
+		"id": 5,
+		"title": "Loremle Höhöö",
+		"alias": "vuuutticle",
+		"owner": "Toni Lähdekorpi",
+		"created": "2019-09-10T13:31:21.528Z",
+		"permission": [
+			0
+		]
+	}
+]

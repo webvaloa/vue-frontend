@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
+	<link rel="stylesheet" href="webvaloa.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="vue-pagination-2.min.js"></script>
+</head>
+
+<body>
+	<header class="navbar bg-gray" id="webvaloa">
+		<div class="container grid-lg">
+			<section class="navbar-section">
+				<a href="..." class="navbar-brand mr-2 text-dark">Webvaloa</a>
+				<a href="..." class="btn btn-link active">Articles</a>
+				<a href="..." class="btn btn-link">Users</a>
+				<div class="dropdown">
+					<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+						dropdown menu <i class="icon icon-caret"></i>
+					</a>
+					<!-- menu component -->
+					<ul class="menu">
+						<li class="menu-item"><a href="#dropdowns">Hahaa</a></li>
+						<li class="menu-item"><a href="#dropdowns">Hihii</a></li>
+						<li class="menu-item"><a href="#dropdowns">Hohoo</a></li>
+						<li class="menu-item"><a href="#dropdowns">Don't care; imma getting replaced with a megamenu</a></li>
+					</ul>
+				</div>
+		</div>
+		</section>
+	</header>
+
+	<div id="app" class="container grid-lg">
+
+		<!--<div class="toast toast-success">
+			<button class="btn btn-clear float-right"></button>
+			Successfully fucked up everything.
+		</div>-->
+
+		<div class="card" id="main-content">
+			<div class="card-header">
+				<input class="form-input float-right col-4" type="search" v-model="searchString" placeholder="Search articles">
+				<div class="card-title h5">Articles</div>
+				<div class="card-subtitle text-gray">Lists all articles in the database.</div>
+			</div>
+			<div class="card-body">
+				<div class="loading loading-lg" v-if="loading"></div>
+				<div class="content-wrapper" v-if="!loading">
+					<div class="content">
+						<ul class="tab tab-block">
+							<li class="tab-item" v-for="category in categories">
+								<a @click="setCategory(category.id)" v-bind:class="{ active: currentCategory == category.id }">{{category.name}}</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="articles">
+								<div class="tile tile-centered" v-for="(article, index) in pagination" v-bind:key="index">
+									<div class="tile-content">
+										<div class="tile-title">{{article.title}}</div>
+										<small class="tile-subtitle text-gray">{{article.owner}} · <span class="permission" v-for="permission of article.permissions">a{{(typeof roles[permission] === "object")?roles[permission].name:"?"}}</span> · {{article.created}}</small>
+									</div>
+									<div class="tile-action">
+										<a :href="'/article/edit/' + article.id" class="btn btn-link">
+											Edit
+										</a>
+										<!-- <button class="btn btn-link">
+											<i class="icon icon-more-vert"></i>
+										</button> -->
+									</div>
+								</div>
+							</div>
+
+
+							<!-- <ul class="pagination">
+						<li class="page-item disabled">
+							<a href="#" tabindex="-1">Previous</a>
+						</li> 
+						<li class="page-item active">
+							<a href="#">1</a>
+						</li>
+						<li class="page-item">
+							<a href="#">2</a>
+						</li>
+						<li class="page-item">
+							<a href="#">3</a>
+						</li>
+						<li class="page-item">
+							<span>...</span>
+						</li>
+						<li class="page-item">
+							<a href="#">12</a>
+						</li>
+				 <li class="page-item">
+							<a href="#">Next</a>
+						</li> 
+					</ul> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<pagination v-bind:records="articles.length" v-model="page" v-bind:per-page="limit" ref="pagination"></pagination>
+				<small class="text-gray" v-if="searchString!==''"> Searching for: "{{searchString}}"</small>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	const app = new Vue({
+		el: '#app',
+		components: {
+			Pagination
+		},
+		data: {
+			page: 1,
+			limit: 5,
+			currentCategory: 0,
+			articles: [],
+			categories: [],
+			roles: {},
+			searchString: "",
+			loading: false,
+		},
+		computed: {
+			pagination() {
+				const page = this.page - 1;
+				let articles = [];
+				if (this.searchString.length !== '') {
+					const searchString = this.searchString.toLocaleLowerCase();
+					articles = this.articles.filter(article => (article.title.toLocaleLowerCase().includes(searchString) || article.alias.toLocaleLowerCase().includes(searchString)));
+				} else {
+					articles = this.articles;
+				}
+				let slice = articles.slice(page * this.limit, (page + 1) * this.limit);
+				console.log("returning", slice, "from", this.articles)
+				return slice;
+			}
+		},
+		methods: {
+			fetchCategories: async () => {
+				return fetch("/fake-api/categories.json")
+					.then(res => {
+						if (res.status !== 200) {
+							throw Error("Server error while fetching categories.");
+						}
+						return res.json();
+					})
+			},
+			fetchArticles: async categoryId => {
+				return fetch(`/fake-api/category/${categoryId}.json`).then(res => {
+					if (res.status !== 200) {
+						throw Error("Server error while fetching articles.");
+					}
+					return res.json();
+				})
+			},
+			fetchRoles: async () => {
+				return fetch(`/fake-api/roles/roles.json`).then(res => {
+					if (res.status !== 200) {
+						throw Error("Server error while fetching roles.");
+					}
+					return res.json();
+				})
+			},
+			async setCategory(id) {
+				console.log(`Setting category to ${id}`);
+				this.loading = true;
+				try {
+					this.page = 1;
+					this.$refs.pagination.setPage(1);
+					this.currentCategory = id;
+					this.articles = await this.fetchArticles(this.currentCategory);
+					this.loading = false;
+				} catch (e) {
+					console.error(e);
+					alert(e);
+					this.loading = false;
+				}
+			}
+		},
+		async created() {
+			this.loading = true;
+			try {
+				this.page = 1;
+				this.categories = await this.fetchCategories();
+				if (this.categories.length === 0) {
+					throw Error("No categories found");
+				}
+				this.currentCategory = this.categories[0].id;
+				this.articles = await this.fetchArticles(this.currentCategory);
+				this.roles = await this.fetchRoles();
+				this.loading = false;
+			} catch (e) {
+				console.error(e);
+				alert(e);
+				this.loading = false;
+			}
+		}
+	})
+</script>
+
+
+</html>
