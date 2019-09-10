@@ -1,6 +1,6 @@
 // Example of project-name.scss
 // Define variables to override default ones
-$primary-color: #1e4bc8;
+$primary-color: #377CDA;
 $dark-color: #353535;
 
 // Import full Spectre source code
@@ -8,6 +8,7 @@ $dark-color: #353535;
 
 body {
 	background: #EFF3F5;
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',  Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 #webvaloa {
@@ -36,16 +37,40 @@ body {
 				display: flex;
 				flex: 1;
 
+				&:hover {
+					background: #f2f2f9;
+				}
+
+				&.active {
+					background: $primary-color;
+
+					&,
+					a {
+						color: white;
+					}
+				}
+
 				a {
+					i.fas {
+						margin: 0 10px 0 0;
+					}
+
+					font-size: 13px;
+					font-weight: 600;
+					text-decoration: none;
+					text-transform: uppercase;
+
+
 					width: 100%;
 					text-align: center;
 					display: block;
-					padding: 10px;
+					padding: 13px;
 				}
 
 				.submenu {
 					display: none;
 				}
+
 				&:hover>.submenu {
 					position: absolute;
 					display: block;
