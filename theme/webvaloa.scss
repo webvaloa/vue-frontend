@@ -81,6 +81,7 @@ html:not([data-scroll='false']) {
 				}
 
 				a {
+					color: $primary-color;
 					i.fas {
 						margin: 0 10px 0 0;
 					}
@@ -97,19 +98,26 @@ html:not([data-scroll='false']) {
 				}
 
 				.submenu {
-					display: none;
-				}
-
-				&:hover>.submenu {
+					opacity: 0;
+					position: absolute;
+					display: block;
 					padding: 25px;
 					left: 0;
 					right: 0;
 					top: 45px;
-					background: #f2f2f9;
-					position: absolute;
-					display: block;
 					max-height: 100vh;
 					overflow-y: auto;
+					transition: all ease-out 300ms;
+					transform: translateY(-10px);
+					background: #f2f2f9;
+					pointer-events: none;
+				}
+
+				&:hover>.submenu {
+					opacity: 1;
+					transform: translateY(0px);
+					pointer-events: all;
+					transition: all ease-out 100ms;
 				}
 			}
 		}

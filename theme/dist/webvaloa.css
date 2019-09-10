@@ -4655,6 +4655,8 @@ html:not([data-scroll='false']) #webvaloa img.logo
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+
+    color: #377cda;
 }
 #webvaloa nav > ul > li a i.fas
 {
@@ -4662,22 +4664,31 @@ html:not([data-scroll='false']) #webvaloa img.logo
 }
 #webvaloa nav > ul > li .submenu
 {
-    display: none;
-}
-#webvaloa nav > ul > li:hover > .submenu
-{
     position: absolute;
     top: 45px;
     right: 0;
     left: 0;
 
     display: block;
-    overflow-y: auto; 
+    overflow-y: auto;
 
     max-height: 100vh;
     padding: 25px;
 
+    transition: all ease-out 300ms;
+    transform: translateY(-10px);
+    pointer-events: none; 
+
+    opacity: 0;
     background: #f2f2f9;
+}
+#webvaloa nav > ul > li:hover > .submenu
+{
+    transition: all ease-out 100ms; 
+    transform: translateY(0px);
+    pointer-events: all;
+
+    opacity: 1;
 }
 
 #app
