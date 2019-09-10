@@ -104,7 +104,7 @@
 				</div>
 			</div>
 			<div class="card-footer">
-				<pagination v-bind:records="articles.length" v-model="page" v-bind:per-page="limit" ref="pagination"></pagination>
+				<pagination v-bind:records="articleCount" v-model="page" v-bind:per-page="limit" ref="pagination"></pagination>
 				<small class="text-gray" v-if="searchString!==''"> Searching for: "{{searchString}}"</small>
 			</div>
 		</div>
@@ -120,6 +120,7 @@
 		data: {
 			page: 1,
 			limit: 5,
+			articleCount: 0,
 			currentCategory: 0,
 			articles: [],
 			categories: [],
@@ -137,7 +138,8 @@
 				} else {
 					articles = this.articles;
 				}
-				let slice = articles.slice(page * this.limit, (page + 1) * this.limit);
+				this.articleCount = articles.length;
+				const slice = articles.slice(page * this.limit, (page + 1) * this.limit);
 				return slice;
 			}
 		},
