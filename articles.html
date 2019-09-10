@@ -138,7 +138,6 @@
 					articles = this.articles;
 				}
 				let slice = articles.slice(page * this.limit, (page + 1) * this.limit);
-				console.log("returning", slice, "from", this.articles)
 				return slice;
 			}
 		},
