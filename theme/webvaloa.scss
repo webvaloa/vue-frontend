@@ -82,6 +82,7 @@ html:not([data-scroll='false']) {
 
 				a {
 					color: $primary-color;
+
 					i.fas {
 						margin: 0 10px 0 0;
 					}
@@ -144,4 +145,50 @@ html:not([data-scroll='false']) {
 
 .permission.label {
 	margin: 0 2px;
+}
+
+.login {
+	.login-container {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		form {
+			width: 250px;
+			max-width: 100%;
+			margin: auto;
+
+			input {
+				padding-left: 2rem;
+			}
+			input + i {
+				margin: 0 0.65rem;
+				color: #c3cde4;
+			}
+
+			button {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+	}
+	.disclaimer {
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.btn {
+	font-size: 0.6rem;
+	font-weight: 600;
+}
+
+.form-input {
+	border: 1px solid #c3cde4;
+	border-radius: 6px;
 }

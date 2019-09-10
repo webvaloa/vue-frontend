@@ -4717,4 +4717,59 @@ html:not([data-scroll='false']) #webvaloa img.logo
     margin: 0 2px;
 }
 
+.login .login-container
+{
+    display: flex;
+
+    min-height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+.login .login-container form
+{
+    width: 250px;
+    max-width: 100%;
+    margin: auto;
+}
+.login .login-container form input
+{
+    padding-left: 2rem;
+}
+.login .login-container form input + i
+{
+    margin: 0 .65rem;
+
+    color: #c3cde4;
+}
+.login .login-container form button
+{
+    padding-right: 25px; 
+    padding-left: 25px;
+}
+
+.login .disclaimer
+{
+    display: block;
+
+    margin-top: 20px;
+}
+
+.bg-white
+{
+    background-color: white;
+}
+
+.btn
+{
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.form-input
+{
+    border: 1px solid #c3cde4;
+    border-radius: 6px;
+}
+
 /*# sourceMappingURL=webvaloa.css.map */
