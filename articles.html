@@ -62,7 +62,7 @@
 								<div class="tile tile-centered" v-for="(article, index) in pagination" v-bind:key="index">
 									<div class="tile-content">
 										<div class="tile-title">{{article.title}}</div>
-										<small class="tile-subtitle text-gray">{{article.owner}} · <span class="label label-rounded" v-for="permission of article.permission">{{(typeof roles[permission] === "object")?roles[permission].name:"?"}}</span> · {{article.created}}</small>
+										<small class="tile-subtitle text-gray">{{article.owner}} · <span class="permission label label-rounded" v-for="permission of article.permission">{{(typeof roles[permission] === "object")?roles[permission].name:"?"}}</span> · {{article.created}}</small>
 									</div>
 									<div class="tile-action">
 										<a :href="'/article/edit/' + article.id" class="btn btn-link">
