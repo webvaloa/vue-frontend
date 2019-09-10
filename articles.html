@@ -8,31 +8,104 @@
 	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css" />
 	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css" />
 	<link rel="stylesheet" href="/theme/dist/webvaloa.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="vue-pagination-2.min.js"></script>
 </head>
 
 <body>
-	<header class="navbar bg-gray" id="webvaloa">
+	<header id="webvaloa">
 		<div class="container grid-lg">
-			<section class="navbar-section">
-				<a href="..." class="navbar-brand mr-2 text-dark">Webvaloa</a>
-				<a href="..." class="btn btn-link active">Articles</a>
-				<a href="..." class="btn btn-link">Users</a>
-				<div class="dropdown">
-					<a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
-						dropdown menu <i class="icon icon-caret"></i>
-					</a>
-					<!-- menu component -->
-					<ul class="menu">
-						<li class="menu-item"><a href="#dropdowns">Hahaa</a></li>
-						<li class="menu-item"><a href="#dropdowns">Hihii</a></li>
-						<li class="menu-item"><a href="#dropdowns">Hohoo</a></li>
-						<li class="menu-item"><a href="#dropdowns">Don't care; imma getting replaced with a megamenu</a></li>
-					</ul>
-				</div>
+			<img src="/assets/img/webvaloa.svg" alt="Webvaloa" class="logo" />
+			<nav>
+				<ul>
+					<li class="active">
+						<a href="/articles.html" class="nav-link"><i class="fas fas-file"></i><span class="menu-title">Articles</span></a>
+					</li>
+					<li>
+						<a href="pages/widgets.html" class="nav-link"><i class="link-icon mdi mdi-apple-safari"></i><span class="menu-title">Categories</span></a>
+					</li>
+					<li>
+						<a href="#" class="nav-link"><i class="link-icon mdi mdi-atom"></i><span class="menu-title">Huge Menu</span><i class="menu-arrow"></i></a>
+						<div class="submenu">
+							<div class="col-group-wrapper row">
+								<div class="col-group col-md-4">
+									<div class="row">
+										<div class="col-12">
+											<p class="category-heading">Basic Elements</p>
+										</div>
+										<div class="col-md-6">
+											<ul class="submenu-item">
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/accordions.html">Accordion</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/badges.html">Badges</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdown</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/modals.html">Modals</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<ul class="submenu-item">
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/progress.html">Progress bar</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/pagination.html">Pagination</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/tabs.html">Tabs</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/tooltips.html">Tooltip</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-group col-md-4">
+									<div class="row">
+										<div class="col-12">
+											<p class="category-heading">Advanced Elements</p>
+										</div>
+										<div class="col-md-6">
+											<ul class="submenu-item">
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/dragula.html">Dragula</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/carousel.html">Carousel</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/clipboard.html">Clipboard</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/context-menu.html">Context Menu</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/loaders.html">Loader</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/slider.html">Slider</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<ul class="submenu-item">
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/tour.html">Tour</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/popups.html">Popup</a></li>
+												<li class="nav-item"><a class="nav-link" href="pages/ui-features/notifications.html">Notification</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-group col-md-2">
+									<p class="category-heading">Table</p>
+									<ul class="submenu-item">
+										<li class="nav-item"><a class="nav-link" href="pages/tables/basic-table.html">Basic Table</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/tables/data-table.html">Data Table</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/tables/js-grid.html">Js-grid</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/tables/sortable-table.html">Sortable Table</a></li>
+									</ul>
+								</div>
+								<div class="col-group col-md-2">
+									<p class="category-heading">Icons</p>
+									<ul class="submenu-item">
+										<li class="nav-item"><a class="nav-link" href="pages/icons/flag-icons.html">Flag Icons</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/icons/font-awesome.html">Font Awesome</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/icons/simple-line-icon.html">Simple Line Icons</a></li>
+										<li class="nav-item"><a class="nav-link" href="pages/icons/themify.html">Themify Icons</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+							<a href="pages/widgets.html" class="nav-link"><i class="link-icon mdi mdi-apple-safari"></i><span class="menu-title">Settings</span></a>
+						</li>
+				</ul>
+			</nav>
 		</div>
-		</section>
 	</header>
 
 	<div id="app" class="container grid-lg">
@@ -68,37 +141,9 @@
 										<a :href="'/article/edit/' + article.id" class="btn btn-link">
 											Edit
 										</a>
-										<!-- <button class="btn btn-link">
-											<i class="icon icon-more-vert"></i>
-										</button> -->
 									</div>
 								</div>
 							</div>
-
-
-							<!-- <ul class="pagination">
-						<li class="page-item disabled">
-							<a href="#" tabindex="-1">Previous</a>
-						</li> 
-						<li class="page-item active">
-							<a href="#">1</a>
-						</li>
-						<li class="page-item">
-							<a href="#">2</a>
-						</li>
-						<li class="page-item">
-							<a href="#">3</a>
-						</li>
-						<li class="page-item">
-							<span>...</span>
-						</li>
-						<li class="page-item">
-							<a href="#">12</a>
-						</li>
-				 <li class="page-item">
-							<a href="#">Next</a>
-						</li> 
-					</ul> -->
 						</div>
 					</div>
 				</div>
