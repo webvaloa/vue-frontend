@@ -1,0 +1,42 @@
+// Example of project-name.scss
+// Define variables to override default ones
+$primary-color: #105888;
+$dark-color: #353535;
+
+// Import full Spectre source code
+@import "node_modules/spectre.css/src/spectre";
+
+body {
+	background: #EFF3F5;
+}
+
+#webvaloa a {
+	line-height: 2em;
+	height: 2.9em;
+}
+
+#webvaloa .navbar-brand {
+	line-height: 2.7em;
+}
+
+#app {
+	padding: 25px 0;
+}
+
+#main-content {
+	margin: 25px 0;
+	border: 0;
+	box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, .15);
+}
+
+.articles {
+	.tile {
+		margin: 15px 0;
+		padding-bottom: 10px;
+		border-bottom: solid 1px #efefef;
+	}
+}
+
+.permission.label {
+	margin: 0 2px;
+}
