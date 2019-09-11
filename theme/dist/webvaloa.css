@@ -1152,23 +1152,23 @@ legend
 }
 .form-input::-webkit-input-placeholder
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .form-input::-moz-placeholder
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .form-input:-ms-input-placeholder
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .form-input::-ms-input-placeholder
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .form-input::placeholder
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .form-input.input-sm
 {
@@ -1210,7 +1210,7 @@ textarea.form-input.input-sm
 
     margin-top: .2rem; 
 
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .has-success .form-input-hint,
 .is-success + .form-input-hint
@@ -1493,7 +1493,7 @@ textarea.form-input.input-sm
     height: .9rem;
 
     border-radius: .45rem;
-    background: #f4f4f4;
+    background: #c1c1c1;
     background-clip: padding-box;
 }
 .form-switch .form-icon::before
@@ -1820,7 +1820,7 @@ code
 
     content: attr(data-lang);
 
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .code code
 {
@@ -1918,7 +1918,7 @@ video.video-responsive::before
 {
     margin-top: .8rem; 
 
-    color: #a8a8a8;
+    color: #757575;
 }
 
 .container
@@ -2670,7 +2670,7 @@ summary.accordion-header::-webkit-details-marker
     height: .5em;
 
     border-radius: 50%;
-    background: #f4f4f4;
+    background: #c1c1c1;
     box-shadow: 0 0 0 .1rem #fff;
 }
 .avatar .avatar-presence.online
@@ -2770,7 +2770,7 @@ summary.accordion-header::-webkit-details-marker
     margin: 0;
     padding: .2rem 0; 
 
-    color: #a8a8a8;
+    color: #757575;
 }
 .breadcrumb .breadcrumb-item:not(:last-child)
 {
@@ -2778,7 +2778,7 @@ summary.accordion-header::-webkit-details-marker
 }
 .breadcrumb .breadcrumb-item:not(:last-child) a
 {
-    color: #a8a8a8;
+    color: #757575;
 }
 .breadcrumb .breadcrumb-item:not(:first-child)::before
 {
@@ -2786,7 +2786,7 @@ summary.accordion-header::-webkit-details-marker
 
     content: '/';
 
-    color: #a8a8a8;
+    color: #757575;
 }
 
 .bar
@@ -3006,7 +3006,7 @@ summary.accordion-header::-webkit-details-marker
 
     text-align: center;
 
-    color: #a8a8a8;
+    color: #757575;
     border-radius: .1rem;
     background: #f4f4f4;
 }
@@ -3225,7 +3225,7 @@ summary.accordion-header::-webkit-details-marker
 
     text-decoration: none; 
 
-    color: #a8a8a8;
+    color: #757575;
 }
 .nav .nav-item a:focus,
 .nav .nav-item a:hover
@@ -3236,7 +3236,7 @@ summary.accordion-header::-webkit-details-marker
 {
     font-weight: bold; 
 
-    color: #8e8e8e;
+    color: #5b5b5b;
 }
 .nav .nav-item.active > a:focus,
 .nav .nav-item.active > a:hover
@@ -3484,7 +3484,7 @@ summary.accordion-header::-webkit-details-marker
 }
 .step .step-item.active ~ .step-item a
 {
-    color: #f4f4f4;
+    color: #c1c1c1;
 }
 .step .step-item.active ~ .step-item a::before
 {
@@ -3838,18 +3838,18 @@ a.text-secondary:visited
 
 .text-gray
 {
-    color: #f4f4f4 !important;
+    color: #c1c1c1 !important;
 }
 
 a.text-gray:focus,
 a.text-gray:hover
 {
-    color: #e8e7e7;
+    color: #b5b4b4;
 }
 
 a.text-gray:visited
 {
-    color: white;
+    color: #cecece;
 }
 
 .text-light
@@ -4088,7 +4088,7 @@ a.text-error:visited
     content: attr(data-content);
     transform: translateY(-.65rem); 
 
-    color: #f4f4f4;
+    color: #c1c1c1;
     background: #fff;
 }
 
@@ -4646,7 +4646,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
 {
     width: 45px; 
 
-    background: #f4f4f4;
+    background: #f1f1f9;
 
     flex: inherit;
 }
@@ -4674,7 +4674,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     opacity: 0; 
     border: 0;
     outline: none;
-    background: #f4f4f4;
+    background: #f1f1f9;
     box-shadow: none;
 
     -webkit-appearance: none;
@@ -4705,7 +4705,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
 
     border: 0;
     outline: 0;
-    background: #f4f4f4;
+    background: #f1f1f9;
 }
 #webvaloa nav > ul > li.search .results
 {
@@ -4719,7 +4719,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     height: 200px; 
     padding: 15px;
 
-    background: #f4f4f4;
+    background: #f1f1f9;
 }
 #webvaloa nav > ul > li.search i.fas
 {
