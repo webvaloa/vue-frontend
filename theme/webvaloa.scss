@@ -98,6 +98,19 @@ html:not([data-scroll='false']) {
 					padding: 13px;
 				}
 
+				.submenu a {
+					padding: 2px 4px 2px 4px;
+					text-align: left;
+				}
+
+				.submenu a:hover {
+					background: #f9f9fc;
+				}
+
+				.submenu .column h5 {
+					padding-left: 10px;
+				}
+
 				.submenu {
 					opacity: 0;
 					position: absolute;
@@ -112,6 +125,22 @@ html:not([data-scroll='false']) {
 					transform: translateY(-10px);
 					background: #f2f2f9;
 					pointer-events: none;
+				}
+
+				.submenu ul li {
+					list-style-type: none;
+					padding-left: 0px;
+					margin-left: 0px;
+				}
+
+				.submenu * ul {
+					padding: 0px !important;
+					margin: 0px !important;
+				}
+
+				.submenu ul li a {
+					padding: 5px 10px 5px 10px;
+					margin-left: 0px;
 				}
 
 				&:hover>.submenu {

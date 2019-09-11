@@ -4662,6 +4662,20 @@ html:not([data-scroll='false']) #webvaloa img.logo
 {
     margin: 0 10px 0 0;
 }
+#webvaloa nav > ul > li .submenu a
+{
+    padding: 2px 4px 2px 4px;
+
+    text-align: left;
+}
+#webvaloa nav > ul > li .submenu a:hover
+{
+    background: #f9f9fc;
+}
+#webvaloa nav > ul > li .submenu .column h5
+{
+    padding-left: 10px;
+}
 #webvaloa nav > ul > li .submenu
 {
     position: absolute;
@@ -4681,6 +4695,23 @@ html:not([data-scroll='false']) #webvaloa img.logo
 
     opacity: 0;
     background: #f2f2f9;
+}
+#webvaloa nav > ul > li .submenu ul li
+{
+    margin-left: 0; 
+    padding-left: 0;
+
+    list-style-type: none;
+}
+#webvaloa nav > ul > li .submenu * ul
+{
+    margin: 0 !important; 
+    padding: 0 !important;
+}
+#webvaloa nav > ul > li .submenu ul li a
+{
+    margin-left: 0; 
+    padding: 5px 10px 5px 10px;
 }
 #webvaloa nav > ul > li:hover > .submenu
 {
