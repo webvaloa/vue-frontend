@@ -4631,7 +4631,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
 }
 #webvaloa nav > ul > li:hover
 {
-    background: #f2f2f9;
+    background: #f1f1f9;
 }
 #webvaloa nav > ul > li.active
 {
@@ -4780,7 +4780,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     pointer-events: none; 
 
     opacity: 0;
-    background: #f2f2f9;
+    background: #f1f1f9;
 }
 #webvaloa nav > ul > li .submenu .column h5
 {
@@ -4794,7 +4794,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
 }
 #webvaloa nav > ul > li .submenu a:hover
 {
-    background: #f9f9fc;
+    background: #f1f1f9;
 }
 #webvaloa nav > ul > li .submenu ul li
 {
@@ -4884,6 +4884,11 @@ html:not([data-scroll='false']) #webvaloa img.logo
     display: block;
 
     margin-top: 20px;
+}
+
+.tab-item a
+{
+    cursor: pointer;
 }
 
 .bg-white

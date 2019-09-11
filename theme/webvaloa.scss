@@ -85,7 +85,7 @@ html:not([data-scroll='false']) {
 				}
 
 				&.search {
-					background: $search-panel;
+					background: $navi-active-bg;
 					flex: inherit;
 					width: 45px;
 
@@ -100,7 +100,7 @@ html:not([data-scroll='false']) {
 						-webkit-appearance: none;
 						-moz-appearance: none;
 						appearance: none;
-						background: $search-panel;
+						background: $navi-active-bg;
 						border: 0;
 						box-shadow: none;
 						width: 100%;
@@ -134,13 +134,13 @@ html:not([data-scroll='false']) {
 						border: 0;
 						top: -45px;
 						right: 0;
-						background: $search-panel;
+						background: $navi-active-bg;
 					}
 
 					.results {
 						display: block;
 						padding: 15px;
-						background: $search-panel;
+						background: $navi-active-bg;
 						position: absolute;
 						left: 0;
 						top: 45px;
@@ -296,6 +296,10 @@ html:not([data-scroll='false']) {
 		display: block;
 		margin-top: 20px;
 	}
+}
+
+.tab-item a {
+	cursor: pointer;
 }
 
 .bg-white {
