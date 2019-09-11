@@ -4650,6 +4650,12 @@ html:not([data-scroll='false']) #webvaloa img.logo
 
     flex: inherit;
 }
+#webvaloa nav > ul > li.search form
+{
+    display: inherit;
+
+    width: 100%;
+}
 #webvaloa nav > ul > li.search input
 {
     position: absolute;
@@ -4684,6 +4690,22 @@ html:not([data-scroll='false']) #webvaloa img.logo
 #webvaloa nav > ul > li.search input:placeholder-shown + .results
 {
     display: none;
+}
+#webvaloa nav > ul > li.search button.clear
+{
+    line-height: 45px;
+
+    position: absolute;
+    z-index: 200000;
+    top: -45px;
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border: 0;
+    outline: 0;
+    background: #f4f4f4;
 }
 #webvaloa nav > ul > li.search .results
 {

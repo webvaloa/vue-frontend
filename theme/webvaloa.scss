@@ -91,6 +91,11 @@ html:not([data-scroll='false']) {
 					flex: inherit;
 					width: 45px;
 
+					form {
+						display: inherit;
+						width: 100%;
+					}
+
 					input {
 						display: block;
 						outline: none;
@@ -119,6 +124,19 @@ html:not([data-scroll='false']) {
 
 					input:placeholder-shown+.results {
 						display: none;
+					}
+
+					button.clear {
+						line-height: 45px;
+						position: absolute;
+						z-index: 200000;
+						height: 45px;
+						width: 45px;
+						outline: 0;
+						border: 0;
+						top: -45px;
+						right: 0;
+						background: $gray-color;
 					}
 
 					.results {
