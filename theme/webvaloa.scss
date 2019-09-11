@@ -2,6 +2,9 @@
 // Define variables to override default ones
 $primary-color: #377CDA;
 $dark-color: #353535;
+$layout-spacing: .8rem;
+$layout-spacing-sm: .4rem;
+$layout-spacing-lg: 2rem;
 
 // Import full Spectre source code
 @import "node_modules/spectre.css/src/spectre";
