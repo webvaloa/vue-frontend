@@ -180,6 +180,12 @@
 										<small class="tile-subtitle text-gray">{{article.owner}} · <span class="permission label label-rounded" v-for="permission of article.permission">{{(typeof roles[permission] === "object")?roles[permission].name:"?"}}</span> · {{article.created}}</small>
 									</div>
 									<div class="tile-action">
+										<a :href="'/article/edit/' + article.id" class="btn btn-link text-dark">
+											Clone
+										</a>
+										<a :href="'/article/edit/' + article.id" class="btn btn-link text-error">
+											Delete
+										</a>
 										<a :href="'/article/edit/' + article.id" class="btn btn-link">
 											Edit
 										</a>
@@ -202,6 +208,12 @@
 											<td>{{article.owner}}</td>
 											<td>{{article.created}}</td>
 											<td>
+												<a :href="'/article/edit/' + article.id" class="btn btn-link text-dark">
+													Clone
+												</a>
+												<a :href="'/article/edit/' + article.id" class="btn btn-link text-error">
+													Delete
+												</a>
 												<a :href="'/article/edit/' + article.id" class="btn btn-link">
 													Edit
 												</a>
