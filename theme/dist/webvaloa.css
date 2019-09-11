@@ -4681,6 +4681,24 @@ html:not([data-scroll='false']) #webvaloa img.logo
 
     opacity: 1;
 }
+#webvaloa nav > ul > li.search input:placeholder-shown + .results
+{
+    display: none;
+}
+#webvaloa nav > ul > li.search .results
+{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    height: 200px; 
+    padding: 15px;
+
+    background: #f4f4f4;
+}
 #webvaloa nav > ul > li.search i.fas
 {
     line-height: 45px; 
@@ -4691,18 +4709,6 @@ html:not([data-scroll='false']) #webvaloa img.logo
     height: 100%;
 
     text-align: center;
-}
-#webvaloa nav > ul > li.search .search-bar
-{
-    position: absolute;
-    top: 0;
-    right: 50px;
-    bottom: 0; 
-    left: 0;
-
-    pointer-events: none;
-
-    opacity: 0;
 }
 #webvaloa nav > ul > li.search a
 {
