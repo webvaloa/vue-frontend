@@ -4588,7 +4588,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     transition: all ease-out 300ms; 
 
     background: white;
-    box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);
+    /*box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);*/
 }
 #webvaloa .container
 {
@@ -4795,7 +4795,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
 #webvaloa nav > ul > li .submenu a
 {
     padding: 2px 4px 2px 4px;
-
+#webvaloa
     text-align: left;
 }
 #webvaloa nav > ul > li .submenu a:hover
@@ -4838,7 +4838,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     margin: 25px 0;
 
     border: 0;
-    box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);
+    /*box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);*/
 }
 
 .tab-articles
