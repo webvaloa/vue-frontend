@@ -4581,7 +4581,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     z-index: 100000;
     top: 0;
 
-    padding: 85px 0 25px;
+    padding: 115px 0 25px;
 
     transition: all ease-out 300ms; 
 
@@ -4598,7 +4598,7 @@ html:not([data-scroll='false']) #webvaloa img.logo
     top: 25px;
 
     width: auto;
-    height: 50px;
+    height: 75px;
 
     transition: all ease-out 200ms; 
 
