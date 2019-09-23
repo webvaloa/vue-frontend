@@ -4786,6 +4786,10 @@ html:not([data-scroll='false']) #webvaloa img.logo
 {
     padding-left: 10px;
 }
+#webvaloa nav > ul > li .submenu .columns:not(:first-child) {
+    margin-top: 10px;
+    border-top: 1px solid #f9f9fc;
+}
 #webvaloa nav > ul > li .submenu a
 {
     padding: 2px 4px 2px 4px;
